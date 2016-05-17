@@ -75,3 +75,17 @@ done
 ```
  }
 )
+
+
+
+Article.create(
+  id: 6,
+  title: "Shell Post 3",
+  published_at: Time.now,
+  body: 
+  %Q{### My List of Things To Do!
+``` shell
+awk '{print $1}' ~/.bash_history | sort | uniq -c | sort -n
+```
+ }
+)

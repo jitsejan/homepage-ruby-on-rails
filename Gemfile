@@ -47,3 +47,5 @@ end
 
 gem 'redcarpet'
 gem 'rouge'
+
+gem 'bootstrap-sass'
