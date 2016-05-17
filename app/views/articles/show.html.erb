@@ -1,0 +1,8 @@
+<h1><%= @article.title %></h1>
+<hr />
+  
+<p>
+  <%= markdown(@article.body) %>
+</p>
+<h4>Published <%= time_ago_in_words @article.published_at %> ago</h4>
+<%= link_to "Back to Index", articles_path %>

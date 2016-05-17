@@ -1,0 +1,14 @@
+<h1>My Blog</h1>
+<hr />
+<% @articles.each do |article| %>
+  <h1><%= link_to article.title, article %></h1>
+  
+  <p>
+    <%= markdown(article.body) %>
+  </p>
+  <h5>Published <%= time_ago_in_words article.published_at %> ago</h5>
+
+  <% if article != @articles.last %>
+  <hr />
+  <% end %>
+<% end %>
