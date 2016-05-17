@@ -2,44 +2,6 @@ Article.delete_all
 
 Article.create(
   id: 1,
-  title: "My Very First Post",
-  published_at: Time.now - 1.day,
-  body: 
-  %Q{### There Is Something You Should Know!
-
-  This is my very first post using markdown!
-
-  }
-)
-
-Article.create(
-  id: 2,
-  title: "My Second Post",
-  published_at: Time.now,
-  body: 
-  %Q{### My List of Things To Do!
-
-  Here is the list of things I wish to do!
-  
-  * write more posts
-  * write even more posts
-  * write even more posts!}
-)
-
-Article.create(
-  id: 3,
-  title: "Ruby Post",
-  published_at: Time.now,
-  body: 
-  %Q{### My List of Things To Do!
-``` ruby
-some_code_here
-```
- }
-)
-
-Article.create(
-  id: 4,
   title: "Shell Post",
   published_at: Time.now,
   body: 
@@ -61,7 +23,8 @@ Article.create(
   title: "Shell Post 2",
   published_at: Time.now,
   body: 
-  %Q{### My List of Things To Do!
+  %Q{### Create big files with dd
+Use dd in Unix to create files with a size of 2.7 GB.
 ``` shell
 #!/bin/ksh
 dir=/this/is/my/outputdir/
@@ -83,7 +46,7 @@ Article.create(
   title: "Shell Post 3",
   published_at: Time.now,
   body: 
-  %Q{### My List of Things To Do!
+  %Q{###Find most used history command
 ``` shell
 awk '{print $1}' ~/.bash_history | sort | uniq -c | sort -n
 ```

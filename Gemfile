@@ -49,3 +49,5 @@ gem 'redcarpet'
 gem 'rouge'
 
 gem 'bootstrap-sass'
+
+gem 'searchkick'

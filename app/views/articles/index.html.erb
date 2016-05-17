@@ -1,4 +1,13 @@
 <h1>My Blog</h1>
+<div class="articles-search"> 
+  <h1>Search Articles</h1> 
+    <%= form_tag articles_path, class: "form-inline", method: :get do %> 
+      <div class="input-group"> 
+        <%= text_field_tag :query, params[:query], class: 'form-control', id: 'article_search', autocomplete: 'off' %> 
+        <%= submit_tag 'Search', class: 'btn btn-primary' %> 
+      </div> 
+    <% end %> 
+</div>
 <hr />
 <% @articles.each do |article| %>
   <h1><%= link_to article.title, article %></h1>
@@ -8,7 +17,5 @@
   </p>
   <h5>Published <%= time_ago_in_words article.published_at %> ago</h5>
 
-  <% if article != @articles.last %>
-  <hr />
-  <% end %>
+  
 <% end %>

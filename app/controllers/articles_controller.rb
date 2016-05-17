@@ -1,6 +1,14 @@
 class ArticlesController < ApplicationController
+  def autocomplete
+    render json: Article.search(params[:query], autocomplete: true, limit: 10).map(&:title)
+  end
+  
   def index
-    @articles = Article.order("published_at DESC")
+    if params[:query].present?
+      @articles = Article.search(params[:query])
+    else
+      @articles = Article.order("published_at DESC")
+    end
   end
 
   def show
