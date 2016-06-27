@@ -1,22 +1,28 @@
 <title>Blog</title>
-<h1>My Blog</h1>
-<div class="articles-search"> 
-  <h1>Search Articles</h1> 
-    <%= form_tag articles_path, class: "form-inline", method: :get do %> 
-      <div class="input-group"> 
-        <%= text_field_tag :query, params[:query], class: 'form-control', id: 'article_search', autocomplete: 'off' %> 
-        <%= submit_tag 'Search', class: 'btn btn-primary' %> 
-      </div> 
-    <% end %> 
+<div class="articles-search">
+  <h1>Search my posts</h1>
+    <%= form_tag articles_path, class: "form-inline", method: :get do %>
+      <div class="input-group">
+        <%= text_field_tag :query, params[:query], class: 'form-control', id: 'article_search', autocomplete: 'off' %>
+        <%= submit_tag 'Search', class: 'btn btn-primary' %>
+      </div>
+    <% end %>
 </div>
 <hr />
+<div class="row">
+  <div class="col-md-10">
 <% @articles.each do |article| %>
   <h1><%= link_to article.title, article %></h1>
-  
+
   <p>
     <%= markdown(article.body) %>
   </p>
   <h5>Published <%= time_ago_in_words article.published_at %> ago</h5>
 
-  
 <% end %>
+  </div>
+  <div class="col-md-2">
+    <h1>About me</h1>
+    Blablablablabla
+  </div>
+</div>
