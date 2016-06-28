@@ -1,13 +1,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 $light-gray: #777;
 
 
 /* universal */
 
-body {
-  padding-top: 60px;
+body, html {
+   height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
 }
 
 section {
@@ -24,7 +29,19 @@ textarea {
     margin-bottom: 10px;
   }
 }
-
+div.img-div{
+    height:200px;
+    width:200px;
+    overflow:hidden;
+    border-radius:50%;
+    margin: 50px auto;
+    img{
+       -webkit-transform:translate(-50%);
+       width: 200px;
+       height: 200px;
+       margin-left:100px;
+   }
+}
 
 /* typography */
 
@@ -57,10 +74,16 @@ p {
 /* footer */
 
 footer {
+  margin-top: 150px;
+  padding-bottom: 50px;
+  font-size: small;
+  color: rgb(200, 200, 200);
+  background-image: url('/assets/Bottom.GIF');
+  background-repeat: repeat-x;
+  background-position: bottom;
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: $light-gray;
+
   a {
     color: #555;
     &:hover {
@@ -91,4 +114,9 @@ footer {
         width: auto;
 }
 
-@import "coderay-github"
+@import "coderay-github";
+
+.about-me {
+   font-size: small;
+   font-style: italic;
+}
