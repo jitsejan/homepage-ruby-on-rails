@@ -1,6 +1,5 @@
 <title>Blog</title>
 <div class="articles-search">
-  <h1>Search my posts</h1>
     <%= form_tag articles_path, class: "form-inline", method: :get do %>
       <div class="input-group">
         <%= text_field_tag :query, params[:query], class: 'form-control', id: 'article_search', autocomplete: 'off' %>
@@ -12,8 +11,11 @@
 <div class="row">
   <div class="col-md-10">
 <% @articles.each do |article| %>
-  <h1><%= link_to article.title, article %></h1>
-
+  <h3><%= article.title %></h3>
+  <p>
+    <%= article.description %>
+  </p>
+  <%= link_to 'Read more..', article %>
   <p>
     <%= markdown(article.body) %>
   </p>
@@ -22,12 +24,11 @@
 <% end %>
   </div>
   <div class="col-md-2">
-    <h1>About me</h1>
     <div class="img-div">
       <img src="/assets/JJ_avatar_01.jpg" />
     </div>
     <div class="about-me">
-    I am a software developer currently work for ASML Veldhoven. I have a passion for the field of big data, pattern recognition and ubiquitous computing, especially in the health care branch.
+    I am a software developer currently working for ASML Veldhoven. I have a passion for the field of big data, pattern recognition and ubiquitous computing, especially in the health care branch.
     </div>
   </div>
 </div>

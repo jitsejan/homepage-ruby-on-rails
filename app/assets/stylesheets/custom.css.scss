@@ -30,16 +30,16 @@ textarea {
   }
 }
 div.img-div{
-    height:200px;
-    width:200px;
+    height:150px;
+    width:150px;
     overflow:hidden;
     border-radius:50%;
     margin: 50px auto;
     img{
        -webkit-transform:translate(-50%);
-       width: 200px;
-       height: 200px;
-       margin-left:100px;
+       width: 150px;
+       height: 150px;
+       margin-left:75px;
    }
 }
 
@@ -119,4 +119,5 @@ footer {
 .about-me {
    font-size: small;
    font-style: italic;
+   text-align: justify;
 }

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'static_pages/about'
+
   #resources :articles, only: [:index, :show]
   
   resources :articles, only: [:index, :show] do
