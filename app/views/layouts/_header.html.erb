@@ -25,7 +25,22 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav pull-right">
-          <li class="active"><a href="#"><img src="/assets/home.gif"/></a></li>
+          <li class="<%= 'active' if current_page?(root_path) %>">
+            <%= link_to root_path, class: "" do %><%= image_tag "/assets/home.gif", class: "" %><% end %>
+            <%= image_tag("/assets/Mario_stand_right.GIF", class: "mario-img") %>
+          </li>
+          <li class="<%= 'active' if current_page?(project_page_path) %>">
+            <%= link_to project_page_path, class: "" do %><%= image_tag "/assets/projects.gif", class: "" %><% end %>
+            <%= image_tag("/assets/Mario_stand_right.GIF", class: "mario-img") %>
+          </li>
+          <li class="<%= 'active' if current_page?(website_page_path) %>">
+            <%= link_to website_page_path, class: "" do %><%= image_tag "/assets/websites.gif", class: "" %><% end %>
+            <%= image_tag("/assets/Mario_stand_right.GIF", class: "mario-img") %>
+          </li>
+          <li class="<%= 'active' if current_page?(about_page_path) %>">
+            <%= link_to about_page_path, class: "" do %><%= image_tag "/assets/about.gif", class: "" %><% end %>
+            <%= image_tag("/assets/Mario_stand_right.GIF", class: "mario-img") %>
+          </li>
           <!--
           <li><a href="#">Link</a></li>
           <li class="dropdown">

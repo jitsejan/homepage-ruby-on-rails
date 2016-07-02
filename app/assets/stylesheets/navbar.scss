@@ -19,8 +19,8 @@
 .navbar-default .navbar-nav > li > a.active{
     background-color: white;
 }
-.navbar-default .navbar-nav>.active>a, 
-.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
 .navbar-default .navbar-nav>.active>a:hover{
     background-color: rgb(102,153,255);
 }
@@ -30,6 +30,13 @@
     background-color: rgb(102,153,255);
     /*border-bottom: 2px solid rgb(102, 153, 255);*/
 
+}
+.navbar-default .navbar-nav > li > img.mario-img{
+  display: none;
+  margin: 0px auto -3px auto;
+}
+.navbar-default .navbar-nav > li.active > img.mario-img{
+  display: block;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,

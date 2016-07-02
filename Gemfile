@@ -49,5 +49,6 @@ gem 'redcarpet'
 gem 'rouge'
 
 gem 'bootstrap-sass'
+gem 'font-awesome-rails'
 
 gem 'searchkick'
