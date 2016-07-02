@@ -5,7 +5,7 @@
 <article>
   <div class="row">
     <div class="thumbnail col-lg-4 col-md-4 col-sm-4">
-      <img src="http://www.jitsejan.nl/uploads/images/project-hongerdoeken.png" class="img-responsive" alt="" >
+      <%= image_tag("http://www.jitsejan.nl/uploads/images/project-hongerdoeken.png", class: "img-responsive") %>
     </div>
     <div class="col-md-8 col-lg-8 col-sm-8">
       <h3 class="entry-title">Hongerdoeken</h3>
@@ -20,7 +20,7 @@
 <p>My graduation project focused on an automatic way of recognising intake moments of a person based on data from different sensors. I used two accelerometers to monitor the arm movements and an in-ear microphone to monitor the sounds of the jaw bone. Based on the recorded data of different persons during the day, I made a classifier in Matlab to automatically find intake moments in the data. For the recognition algorithm I used different feature selectors and classifiers to compare the performance of the classification. It turned out that the intake of drinks is the easiest movement to recognise, while intake using cutlery, especially forks, is difficult to be found in the data. Apart from the cutlery used, it turned out that taller people had better classification results because their long arms make the intake movement more clear.</p>
 </div>
 <div class="thumbnail col-lg-4 col-md-4 col-sm-4">
-<img src="http://www.jitsejan.nl/uploads/images/ADM_James_sensors.png" class="img-responsive" alt="" >
+  <%= image_tag("http://www.jitsejan.nl/uploads/images/ADM_James_sensors.png", class: "img-responsive") %>
 </div>
 </div>
 </article>

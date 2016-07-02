@@ -33,10 +33,12 @@
 }
 .navbar-default .navbar-nav > li > img.mario-img{
   display: none;
-  margin: 0px auto -3px auto;
+  margin: 0px auto -4px auto;
 }
-.navbar-default .navbar-nav > li.active > img.mario-img{
-  display: block;
+@media screen and (min-width: 768px) {
+  .navbar-default .navbar-nav > li.active > img.mario-img{
+    display: block;
+  }
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
