@@ -12,12 +12,16 @@
   <div class="col-md-10">
 <% @articles.each do |article| %>
   <h3><%= article.title %></h3>
+  <% unless article.description.blank? %>
   <p>
     <%= article.description %>
   </p>
-  <%= link_to 'Read more..', article %>
+  <% end %>
+  <%= link_to 'Read more..', article.title.downcase.gsub!(' ', '-') %>
   <p>
-    <%= markdown(article.body) %>
+    <%=
+      #markdown(article.body)
+    %>
   </p>
   <h5>Published <%= time_ago_in_words article.published_at %> ago</h5>
 
@@ -28,7 +32,7 @@
       <img src="/assets/JJ_avatar_01.jpg" />
     </div>
     <div class="about-me">
-    I am a software developer currently working for ASML Veldhoven. I have a passion for the field of big data, pattern recognition and ubiquitous computing, especially in the health care branch.
+    I am a software developer currently working for ASML Veldhoven. I have a passion for the field of big data, pattern recognition and ubiquitous computing.
     </div>
     <div class="social-block">
       <center>
