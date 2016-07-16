@@ -17,5 +17,5 @@ Rails.application.routes.draw do
   get '/about', to: 'static_pages#about', as: 'about_page'
   get '/websites', to: 'static_pages#websites', as: 'website_page'
   get '/projects', to: 'static_pages#projects', as: 'project_page'
-  get ':title' => 'articles#show', :as => :article_details 
+  get ':title', to: 'articles#show', as: 'article_details_page'
 end
