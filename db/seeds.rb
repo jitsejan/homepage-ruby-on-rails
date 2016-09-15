@@ -3,6 +3,7 @@ Article.delete_all
 Article.create(
   id: 1,
   title: "Change the last modified time of a file",
+  description: "This script will change the last modified time of a file using the command line",
   published_at: Time.now,
   body: 
   %Q{This script will change the last modified time of a file in the current directory to 4 days back.
